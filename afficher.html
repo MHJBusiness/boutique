@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ARTICLES </title>
+    <center>BIENVENUE SUR </center>
+    <img src="" alt="">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #fafafa;
+        }
+        .post {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 300px;
+            display: block;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+   <center> <h2>Articles diponibles </h2></center>
+    <div id="zonePublications"></div>
+    <script>
+        const zone = document.getElementById("zonePublications");
+        const publications = JSON.parse(localStorage.getItem("publications")) || [];
+
+        if (publications.length === 0) {
+            zone.innerHTML = "<p>Aucune publication pour l’instant.</p>";
+        } else {
+            publications.forEach(pub => {
+                const div = document.createElement("div");
+                div.classList.add("post");
+                div.innerHTML = `
+                    <p>${pub.texte}</p>
+                    ${pub.image ? `<img src="${pub.image}" alt="Image">` : ""}
+                `;
+                zone.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
