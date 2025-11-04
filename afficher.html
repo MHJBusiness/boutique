@@ -2,14 +2,38 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ARTICLES </title>
-    <center>BIENVENUE SUR </center>
+   
     <img src="" alt="">
     <style>
+        img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+        @media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+}
+
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
             background: #fafafa;
+            
         }
         .post {
             background: white;
@@ -23,10 +47,106 @@
             display: block;
             margin-top: 10px;
             border-radius: 5px;
+            
         }
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: century;
+}
+header{
+ 
+   
+   
+   
+}
+.Logo a{
+    color: #fff;
+    padding: 0px 20px;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+
+}
+
+
+.Logo span{
+    color: rgb(231, 255, 16);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    display: flex;
+    margin-top: 20px;
+}
+
+ul li a{
+text-decoration: none;
+color: #f3ecec;
+background-color: #000;
+padding: 10px 20px ;
+text-transform: uppercase;
+border: 1px solid transparent;
+margin: 10px; ;
+font-weight: 500;
+transition: 0.3s ease;
+}
+
+ul li a:hover{
+    background: #0c0202;
+    color: red;
+}
+
+ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+
+.principale{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+
+
     </style>
 </head>
 <body>
+   
+    <header>
+        <div class="principale">
+            <div class="Logo">
+                <a href="#"> <span>MJH</span></a>
+            </div>
+            <ul>
+                <li><div class="active"></div>
+                    <a href="#" >Menu </a>
+                </li>
+            
+
+                <li>
+                    <a href="#">Commandes</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+               
+            </ul>
+        </div>
+        <div class="titre">
+          
+        </div>
+        
+    </header>
+    <br><br><br> <br><br>
    <center> <h2>Articles diponibles </h2></center>
     <div id="zonePublications"></div>
     <script>
